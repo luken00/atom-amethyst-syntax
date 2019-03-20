@@ -1,0 +1,75 @@
+@import "syntax-variables";
+
+@jsviolet: #cd77ff;
+@jspurple: #33fbab;
+@jsstring: #bababa;
+
+.syntax--js,
+.syntax--jsx {
+    .syntax--keyword {
+        color: @jsviolet;
+
+        &.syntax--control {
+            // import, from, export, default, return, if-else, for, while-do, try-catch
+            color: @jsviolet;
+
+            &.syntax--elements {
+                color: black;
+            }
+        }
+    }
+
+    .syntax--meta {
+        &.syntax--brace {
+            color: white;
+            &.syntax--curly {
+            }
+        }
+    }
+
+    .syntax--string {
+        &.syntax--quoted {
+            color: @jsstring;
+        }
+        &.syntax--unquoted {
+            color: #fbc900;
+        }
+    }
+
+    .syntax--variable {
+        &.syntax--other {
+            &.syntax--readwrite {
+                // color: @jspurple;
+            }
+        }
+    }
+
+    .syntax--punctuation {
+        &.syntax--separator {
+            &.syntax--key-value {
+                color: @jsstring;
+            }
+        }
+        &.syntax--definition {
+            &.syntax--string {
+                &.syntax--begin,
+                &.syntax--end {
+                    color: @jsstring;
+                }
+            }
+        }
+    }
+
+    .syntax--storage {
+        &.syntax--type,
+        &.syntax--modifier {
+            // const, let, var, arrows
+            color: #fb30b0;
+            &.syntax--class,
+            &.syntax--extends {
+                // class ... extends..
+                // color: @jspurple;
+            }
+        }
+    }
+}

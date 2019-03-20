@@ -1,0 +1,70 @@
+var foo = 'foo';
+let bar = 'bar';
+const XYZ = 'XYZ';
+const xyz = XYZ;
+const f = foo;
+
+const _null = null;
+const _undefined = undefined;
+const _bool = true || false;
+const _numb = 999;
+const _string = 'string';
+const _array = [999, 'string', true, null, undefined ];
+const _object = {
+    foo,
+    bar: bar,
+
+}
+
+import Module, { SubModule, module } from 'node_modules';
+const AnotherModule = require('node_modules');
+const yetAnotherModule = require('node_modules');
+
+class SomeClass extends AnotherClass {
+    constructor(){
+        super();
+        this.state = {
+            key: value,
+        }
+    }
+
+    method = () => {
+        for (let i = 0; i < 10; i++) {
+            console.log('miao', variable);
+        }
+        while (i < 10) {
+            if (true) {
+
+            } else if (false) {
+
+            } else {
+
+            }
+        }
+
+        try {
+
+        } catch (e) {
+
+        } finally {
+
+        }
+    }
+
+    method = () => {
+        return this.state;
+    }
+
+    render() {
+        return (
+            <div>
+                <Component>
+                    { () => {'something else here'}}
+                </Component>
+                {'something in here'}
+            </div>
+        );
+    }
+}
+
+export default yetAnotherModule(SomeClass);
